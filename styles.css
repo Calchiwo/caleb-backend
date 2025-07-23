@@ -1,30 +1,59 @@
 body {
-  background-color: #ffffff;
-  font-family: sans-serif;
-  color: #1d4ed8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF; /* Pure White */
+  color: #0000FF; /* Simple Blue */
 }
 
 .container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #0000FF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.1);
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-input {
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 100%;
   padding: 10px;
-  width: 200px;
-  border: 2px solid #1d4ed8;
+  margin-bottom: 20px;
+  border: 1px solid #0000FF;
   border-radius: 5px;
-  margin-right: 10px;
 }
 
-button {
+button[type="submit"] {
   padding: 10px 20px;
-  background-color: #1d4ed8;
-  color: white;
+  background-color: #0000FF;
+  color: #FFFFFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0000CC;
+}
+
+#success-message {
+  color: #0000FF;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#error-message {
+  color: #FF0000; /* Red color for error message */
+  font-weight: bold;
+  margin-top: 20px;
 }

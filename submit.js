@@ -23,11 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
         body: JSON.stringify({ name })
       });
 
+      const result = await response.json();
+
       if (response.ok) {
+        successMessage.innerText = "✅ Submitted successfully!";
         successMessage.style.display = "block";
         nameInput.value = "";
       } else {
-        errorMessage.innerText = "❌ Failed to submit. Try again.";
+        errorMessage.innerText = `❌ Failed: ${result?.error || "Try again."}`;
         errorMessage.style.display = "block";
       }
     } catch (error) {
